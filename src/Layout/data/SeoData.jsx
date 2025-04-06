@@ -2,8 +2,10 @@ export const seoData = {
   defaultTitle: 'One UI',
   logo: '/OneUI-light.png',
   author: 'MOHAMED LAAGUILI',
-  devSite:'https://laaguili-dev.app.genez.io/',
-  url: 'https://vite-tailwind-ui-template.vercel.app/',
+  developerSite:'https://laaguili.vercel.app/',
+  siteUrl: 'https://one-ui-v2.vercel.app/',
+  siteGitUrl: 'https://github.com/MOHAMED-LAAGUILI/ONE-UI',
+
   supportUrl:"https://www.buymeacoffee.com/mohamedlaaguili",
   generator:'https://vercel.com/',
   legalName: 'MOHAMED LAAGUILI',

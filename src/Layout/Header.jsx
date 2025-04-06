@@ -40,23 +40,23 @@ export default function Header({
   user,
 }) {
   return (
-    <header className="h-16 flex items-center justify-between px-6 border-b border-gray-200 dark:border-[#1F1F23] bg-white dark:bg-[#0F0F12] relative">
+    <header className="h-16 flex items-center justify-between px-6 border-b border-gray-200 dark:border-[#1F1F23] bg-white dark:bg-[#111827] relative">
       {/* Sidebar Toggle Button */}
       <button
-        id="sidebar-toggle"
-        onClick={() => {
-          setIsSidebarOpen(!isSidebarOpen);
-        }}
-        className={`lg:hidden border ${
-          isSidebarOpen ? "left-[230px] sticky z-[500]" : ""
-        } p-2 rounded-md text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-[#1F1F23] transition-all duration-200`}
-      >
-        {isSidebarOpen ? (
-          <X className="h-6 w-6" />
-        ) : (
-          <PanelLeftOpen className="h-6 w-6" />
-        )}
-      </button>
+  id="sidebar-toggle"
+  onClick={() => {
+    setIsSidebarOpen(!isSidebarOpen);
+  }}
+  className={`lg:hidden fixed top-3 transition-all ease-in-out duration-300 z-[500] p-2 rounded-md text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-[#1F1F23] border ${
+    isSidebarOpen ? "left-[230px]" : "left-4"
+  }`}
+>
+  {isSidebarOpen ? (
+    <X className="h-6 w-6" />
+  ) : (
+    <PanelLeftOpen className="h-6 w-6" />
+  )}
+</button>
 
       {/* Right-side Icons */}
       <div className="flex gap-4 items-center absolute z-[450] right-5">

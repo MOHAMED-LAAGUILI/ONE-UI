@@ -16,8 +16,6 @@ import {
   Twitter,
   Phone,
   MapPin,
-  Facebook,
-  MessageCircle,
 } from "lucide-react";
 import ClipboardJS from "clipboard";
 import Installation from "../Components/Home/Installation";
@@ -29,6 +27,7 @@ import Contact from "../Components/Home/Contact";
 import toast from "react-hot-toast";
 import { seoData } from "../Layout/data/SeoData";
 import Spinner4 from "../Components/Spinner/Spinner4";
+import { FaDiscord } from "react-icons/fa";
 
 export default function HomePage() {
   const { t } = useTranslation();
@@ -61,6 +60,7 @@ export default function HomePage() {
         fadeIn={fadeIn}
         Github={Github}
         ChevronRight={ChevronRight}
+        siteGitUrl={seoData.siteGitUrl}
       />
       {/* Features Section - With Icons and Better Layout */}
       <Features
@@ -78,7 +78,8 @@ export default function HomePage() {
        motion={motion} 
        t={t}
         Clipboard={Clipboard}
-        toast={toast} />
+        toast={toast}
+        siteGitUrl={seoData.siteGitUrl} />
       {/* Contact Section - New */}
       <Contact
         motion={motion}
@@ -94,11 +95,9 @@ export default function HomePage() {
         phoneNumber={seoData.contact.phone}
         githubLink={seoData.socialLinks.github}
         LinkedinLink={seoData.socialLinks.linkedin}
-        FacebookLink={seoData.socialLinks.facebook}
         DiscordLink={seoData.socialLinks.discord}
         email={seoData.contact.email}
-        Facebook={Facebook}
-         MessageCircle={MessageCircle}
+        Discord={FaDiscord}
          Spinner4={Spinner4}
          useState={useState}
          useEffect={useEffect}

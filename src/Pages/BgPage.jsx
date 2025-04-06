@@ -11,6 +11,7 @@ function BgPage() {
     { title: "Background Paths", component: <BackgroundPaths /> },
     { title: "Hero Geometric", component: <HeroGeometric /> },
     { title: "Hero section", component: <HeroSection /> },
+    
   ];
 
   return (
