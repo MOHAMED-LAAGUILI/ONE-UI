@@ -4,8 +4,8 @@ import { useForm, ValidationError } from "@formspree/react";
 export default function Contact({
   t, motion, toast, Mail, MapPin, Phone, Github,
   Linkedin, Address, phoneNumber, githubLink,
-  LinkedinLink, email, DiscordLink, FacebookLink, Facebook,
-   MessageCircle, Spinner4, useState, useEffect
+  LinkedinLink, email, DiscordLink,
+   Discord, Spinner4, useState, useEffect
 }) {
   const [state, handleSubmit] = useForm("xaneoarl");
   const [toastShown, setToastShown] = useState(false);
@@ -120,22 +120,14 @@ export default function Contact({
                         <Linkedin className="w-5 h-5" />
                       </a>
 
-                      <a
-                        href={FacebookLink}
-                        className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-white/20 transition-colors"
-                        aria-label="Facebook"
-                        target="_blank"
-                      >
-                        <Facebook className="w-5 h-5" />
-                      </a>
-
+                      
                       <a
                         href={DiscordLink}
                         className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-white/20 transition-colors"
                         aria-label="Discord"
                         target="_blank"
                       >
-                        <MessageCircle className="w-5 h-5" />
+                        <Discord className="w-5 h-5" />
                       </a>
 
                       <a

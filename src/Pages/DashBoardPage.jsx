@@ -1,12 +1,23 @@
-import { ChartColumn, CircuitBoard } from "lucide-react";
+import { 
+  ChartColumn, CircuitBoard, PanelRightOpenIcon
+ } from "lucide-react";
 import SharpCard from "@Components/BodyCard";
 import DashBoardItems from "@Components/DashboardItems/DashboardItems1";
 import ApexCharts from "@Components/Charts/ApexCharts";
 import ApexPieChart from "@Components/Charts/ApexPieChart";
+import DashboardItems0 from "@Components/DashboardItems/DashboardItems0";
 
 export default function DashBoardPage() {
   return (
     <div className="space-y-6 px-4 py-6 md:px-8 lg:px-10 xl:px-16">
+      <SharpCard
+        title="Dashboard 0"
+        Icon={PanelRightOpenIcon}
+        classes="shadow-md"
+      >
+        <DashboardItems0 />
+      </SharpCard>
+
       <SharpCard
         title="Dashboard 1"
         Icon={CircuitBoard}

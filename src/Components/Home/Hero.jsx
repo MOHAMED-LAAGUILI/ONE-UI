@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 
 export default function Hero({
-  t, fadeIn, Github, ChevronRight, motion
+  t, fadeIn, Github, ChevronRight, motion, siteGitUrl
 }) {
   return (
     <div>
@@ -62,7 +62,7 @@ export default function Hero({
                 </a>
 
                 <a
-                  href="https://github.com/MOHAMED-LAAGUILI/Vite-Tailwind-UITemplate"
+                  href={siteGitUrl}
                   className="px-8 py-4 rounded-full bg-transparent border-2 border-white text-white font-semibold hover:bg-white/10 transition-all duration-300 flex items-center justify-center"
                   target="_blank"
                   rel="noopener noreferrer"

@@ -1,11 +1,11 @@
 /* eslint-disable react/prop-types */
 
-export default function Installation({ t, motion, Clipboard, toast }) {
+export default function Installation({ t, motion, Clipboard, toast, siteGitUrl }) {
 
   // Handle the copy action
   const handleCopy = () => {
     // Use the Clipboard API to copy the text
-    const textToCopy = "git clone https://github.com/MOHAMED-LAAGUILI/Vite-Tailwind-UITemplate";
+    const textToCopy = `git clone ${siteGitUrl}.git`;
     navigator.clipboard.writeText(textToCopy).then(() => {
       // Show a success toast when the text is successfully copied
       toast.success('Command copied to clipboard!', {
@@ -79,7 +79,7 @@ export default function Installation({ t, motion, Clipboard, toast }) {
               
               <div className="p-6 relative">
                 <pre className="bg-gray-800 text-white p-6 rounded-lg font-mono text-sm overflow-x-auto">
-                  <code>git clone https://github.com/MOHAMED-LAAGUILI/Vite-Tailwind-UITemplate</code>
+                  <code>git clone {siteGitUrl}.git</code>
                 </pre>
                 
                 <button
@@ -119,7 +119,7 @@ export default function Installation({ t, motion, Clipboard, toast }) {
               
               <div className="flex flex-col sm:flex-row justify-center gap-4">
                 <a 
-                  href="https://github.com/MOHAMED-LAAGUILI/Vite-Tailwind-UITemplate/blob/main/README.md" 
+                  href={`${siteGitUrl}/blob/main/README.md`} 
                   className="px-6 py-3 rounded-lg bg-indigo-600 text-white font-medium hover:bg-indigo-700 transition-colors"
                   target="_blank"
                   rel="noopener noreferrer"
