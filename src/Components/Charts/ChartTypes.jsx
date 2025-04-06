@@ -1,0 +1,28 @@
+export const CHART_TYPES = [
+    "bar", 
+    "line", 
+    "area", 
+    "radar", 
+    "heatmap", 
+    "scatter", 
+    //"pie", 
+    //"donut", 
+    //"bubble", 
+    //"candlestick", 
+    //"histogram", 
+    //"treemap", 
+    //"boxPlot", 
+    //"radialBar", 
+    //"polarArea",
+      //"rangeBar", 
+      //"timeline", 
+      //"spline", 
+      //"stepLine", 
+      //"stackedBar", 
+      //"stackedArea", 
+      //"scatter3d", 
+      //"polar", 
+      //"funnel", 
+   
+   
+  ];

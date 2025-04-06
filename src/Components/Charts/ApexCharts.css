@@ -1,0 +1,92 @@
+/* Container & Header */
+.apex_sales-container {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+}
+
+.apex_sales-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 1rem;
+}
+
+/* Controls */
+.apex_sales-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+}
+
+/* Buttons */
+.apex_btn {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  background-color: #f3f4f6;
+  color: #374151;
+  padding: 0.375rem 0.75rem;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  transition: background-color 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.apex_btn:hover {
+  background-color: #e5e7eb;
+}
+
+/* Dropdowns */
+.apex_dropdown {
+  position: relative;
+}
+
+.apex_dropdown-toggle .apex_icon {
+  transition: transform 0.3s ease;
+}
+
+.apex_dropdown-toggle .apex_rotate {
+  transform: rotate(180deg);
+}
+
+.apex_dropdown-menu {
+  position: absolute;
+  top: 100%;
+  margin-top: 0.5rem;
+  width: 150%;
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  overflow: hidden;
+}
+
+.apex_dropdown-menu-right {
+  right: 0;
+  left: auto;
+  width: 12rem;
+}
+
+.apex_dropdown-item {
+  width: 100%;
+  text-align: left;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  font-size: 0.875rem;
+  text-transform: capitalize;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.apex_dropdown-item:hover {
+  background-color: #f3f4f6;
+}
+
+/* Chart */
+.apex_sales-chart {
+  margin-top: 1.5rem;
+}
