@@ -1,33 +1,44 @@
 import {
-  SignInButton, UserButton, ClerkLoaded, useUser
-} from '@clerk/clerk-react';
-
-import {
-  X, Moon, Bell, LogOut, Search, ShoppingBag, PanelLeftOpen,
-  ChevronDown, ChevronLeft, ChevronFirst, ChevronRight,Sun,
+  Sun,
+  Moon,
+  Bell,
+  LogOut,
+  Search,
+  ChevronDown,
+  ChevronLeft,
+  ChevronFirst,
+  MessageCircle,
+  PhoneCall,
+  ChevronRight,
+  Linkedin,
+  Github,
+  MessageCircleDashed,
+  X,
+  ShoppingBag,
+  PanelLeftOpen,
 } from "lucide-react";
-
-import { 
-  FaDiscord, FaGithub, FaLinkedinIn, FaPhoneAlt, FaWhatsapp 
-} from "react-icons/fa";
+import {
+  SignInButton,
+  UserButton,
+  ClerkLoaded,
+   useUser
+} from '@clerk/clerk-react';
 
 import coffeeLogo from "/coffee-logo.svg";
 import logoLight from "/OneUI-light.png";
 import logoDark from "/OneUI-dark.png";
-
 import { Seo } from "./Seo";
 import Header from "./Header";
 import Footer from "./Footer";
 import AsideMaximized from "./AsideMaximized";
 import PinnedIcons from "./PinnedIcons";
-import Spinner0 from "@Components/Spinner/Spinner0";
+import Spinner0 from "../Components/Spinner/Spinner0";
 import { SearchModal } from "./SearchModal";
 import { seoData } from "./data/SeoData";
 import { headerFlags } from "./data/HeaderFlags";
 import { socialLinks } from "./data/FooterLinks";
 import { menuItems } from "./data/AsideMenuItems";
 import { HeaderLinks } from "./data/HeaderLinks";
-
 import React, { useState, useEffect, useRef } from "react";
 import { Outlet, useLocation } from "react-router-dom";
 import toast, { Toaster } from "react-hot-toast";
@@ -162,7 +173,7 @@ export default function Layout() {
             ChevronRight={ChevronRight}
           />
 
-          <div className="flex-1 flex flex-col overflow-hidden  dark:bg-gray-900 ">
+          <div className="flex-1 flex flex-col overflow-hidden  dark:bg-[#151E27] ">
             <Header
               isSidebarOpen={isSidebarOpen}
               setIsSidebarOpen={setIsSidebarOpen}
@@ -221,7 +232,7 @@ export default function Layout() {
             <Footer
               socialLinks={socialLinks}
               formattedTime={formattedTime}
-              devSite={seoData.developerSite}
+              devSite={seoData.devSite}
               DevName={seoData.author}
             />
           </div>
@@ -241,11 +252,11 @@ export default function Layout() {
             showGitHub={true}
             showDiscord={true}
             className=""
-            MessageCircle={FaWhatsapp}
-            PhoneCall={FaPhoneAlt}
-            Linkedin={FaLinkedinIn}
-            Github={FaGithub }
-            Discord={FaDiscord}
+            MessageCircle={MessageCircle}
+            PhoneCall={PhoneCall}
+            Linkedin={Linkedin}
+            Github={Github}
+            Discord={MessageCircleDashed}
             twMerge={twMerge}
             handleMouseEnter={handleMouseEnter}
             handleMouseLeave={handleMouseLeave}

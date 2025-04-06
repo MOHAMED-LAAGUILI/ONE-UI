@@ -1,13 +1,13 @@
 /* eslint-disable no-undef */
 import React, { Suspense } from "react";
 import { createRoot } from "react-dom/client";
-import "@/index.css";
-import "@/i18n";
-import QuantumSpinner from "@Components/Spinner/QuantumSpinner.jsx";
+import "./index.css";
+import "./i18n";
+import QuantumSpinner from "./Components/Spinner/QuantumSpinner.jsx";
 import { ClerkProvider } from '@clerk/clerk-react';
 
 // Lazy load the App component
-const App = React.lazy(() => import("@/App.jsx"));
+const App = React.lazy(() => import("./App.jsx"));
 
 const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY;
 
