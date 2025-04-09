@@ -1,48 +1,27 @@
 # Security Policy
 
-## Supported Versions
-
-The following versions of this project are currently supported with security updates:
-
-| Version | Supported          |
-|---------|--------------------|
-| 1.x.x   | :white_check_mark: |
-| 0.x.x   | :x:                |
-
 ## Reporting a Vulnerability
 
-We take security seriously and appreciate your efforts to responsibly disclose any vulnerabilities you discover.
+If you discover a security vulnerability in One UI, please report it as soon as possible. We take security seriously and aim to address issues promptly.
 
-To report a security vulnerability:
+Please email us at [security@yourproject.com] with the following information:
 
-1. Email us at [mohamed.dev.2001@gmail.com](mailto:mohamed.dev.2001@gmail.com)
-2. Include a detailed description of the vulnerability
-3. Provide steps to reproduce the issue if possible
-4. Include any relevant screenshots or proof-of-concept code
+- A clear description of the vulnerability and how it can be exploited
+- Steps to reproduce the issue
+- Any additional context that might help us assess the severity of the issue
 
-We aim to:
-- Acknowledge your report within 48 hours
-- Investigate and validate the vulnerability within 7 business days
-- Release a fix or mitigation as soon as possible, typically within 30 days
-- Credit you for the discovery (unless you prefer to remain anonymous)
+## Supported Versions
+
+We support the latest release and one previous version. Older versions may no longer receive updates or patches.
+
+- Latest release: 2.0.0
+- Previous version: 1.0.0
 
 ## Security Updates
 
-Security updates will be released as needed and communicated through:
-- GitHub Releases page
-- Project mailing list (subscribe at [mohamed.dev.2001@gmail.com](mailto:mohamed.dev.2001@gmail.com))
-- Security advisories in the GitHub repository
+All security updates will be communicated through the GitHub repository's release page and by email to those who are subscribed to security notifications.
 
-## Security Best Practices
+## Mitigation Steps
 
-We recommend the following to maintain a secure environment:
-- Keep dependencies up to date
-- Use strong, unique passwords
-- Enable two-factor authentication where available
-- Regularly review access permissions
+To mitigate known vulnerabilities, please ensure that you are always running the latest stable version of One UI. Apply any necessary patches or updates provided.
 
-## Known Issues
-
-Current known security issues are tracked in our [GitHub Issues](https://github.com/MOHAMED-LAAGUILI/CV-Portfolio-2-/issues) with the `security` label.
-
-Last updated: April 9, 2025

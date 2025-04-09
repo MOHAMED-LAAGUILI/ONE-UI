@@ -95,6 +95,10 @@ Vite-Tailwind-UITemplate/
 ├── package-lock.json
 ├── eslint.config.js
 ├── README.md
+├── CHANGELOG.md
+├── CODE_OF_CONDUCT.md
+├── SECURITY.md
+├── CONTRIBUTING.md
 ├── postcss.config.js
 ├── tailwind.config.js
 └── vite.config.js

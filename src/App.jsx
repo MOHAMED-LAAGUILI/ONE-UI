@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 // Direct imports of the components
 import TextPage from "@Pages/TextPage";
 import SpinnerPage from "@Pages/SpinnerPage";
-import Layout from "./Layout/Layout";
+import Layout from "@Layout/Layout";
 import DashBoardItems from "@Pages/DashBoardPage";
 import DropDownPage from "@Pages/DropDownPage";
 import AuthPage from "@Pages/AuthPage";
@@ -27,6 +27,7 @@ import BlankPage2 from "@Pages/BlankPage2";
 import TermsOfService from "@Pages/TosPage";
 import { SettingsPage } from "@Pages/SettingPage";
 import { ShoppingCartPage } from "@Pages/ShoppingCartPage";
+import AnimationPage from "@Pages/AnimationPage";
 
 const ENVIRONMENT = import.meta.env.VITE_ENVIRONMENT;
 
@@ -52,6 +53,10 @@ const App = () => {
           <Route path="/alert-page" element={<AlertPage />} />
           <Route path="/banner-page" element={<BannersPage />} />
 
+
+          {/* Animations */}
+          <Route path="/animejs" element={<AnimationPage />} />
+          
           {/* Sections */}
           <Route path="/hero-section" element={<HeroSectionPage />} />
           <Route path="/form-section" element={<FormsPage />} />

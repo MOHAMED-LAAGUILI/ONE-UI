@@ -2,10 +2,11 @@
 import { useEffect } from 'react';
 import SharpCard from '../Components/BodyCard';
 import { Bell, Settings } from "lucide-react"; // Example icons
+import { initFlowbite } from "flowbite";
 
 export default function BlankPage() {
   useEffect(() => {
-       
+    initFlowbite();
   }, []);
 
   return(

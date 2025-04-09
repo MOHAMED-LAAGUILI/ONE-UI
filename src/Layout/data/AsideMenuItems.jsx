@@ -5,6 +5,8 @@ import {
     Settings, 
    } from "lucide-react";
 
+   import { MdAnimation } from "react-icons/md";
+
 const SubItemIcon = () => {
   return (
     <span className="absolute left-[-15px] flex h-3 w-3">
@@ -41,6 +43,15 @@ export const menuItems = [
       { name: "Forms", path: "/form-section", icon: <SubItemIcon className="h-4 w-4 mr-3" /> },
       { name: "Testimonials", path: "/testimonial-section", icon: <SubItemIcon className="h-4 w-4 mr-3" /> },
     ],
+    
+  },
+  {
+    title: "Animations",
+    icon: <MdAnimation  className="h-4 w-5 transition-transform transform hover:scale-110" />,
+    items: [
+      { name: "AnimeJS", path: "/animejs", icon: <SubItemIcon className="h-4 w-4 mr-3" /> },
+   ],
+    
   },
   {
     title: "Pages",
