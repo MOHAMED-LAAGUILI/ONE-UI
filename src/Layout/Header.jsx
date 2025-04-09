@@ -1,6 +1,5 @@
 /* eslint-disable react/prop-types */
 
-
 export default function Header({
   isSidebarOpen,
   setIsSidebarOpen,
@@ -43,20 +42,20 @@ export default function Header({
     <header className="h-16 flex items-center justify-between px-6 border-b border-gray-200 dark:border-[#1F1F23] bg-white dark:bg-[#111827] relative">
       {/* Sidebar Toggle Button */}
       <button
-  id="sidebar-toggle"
-  onClick={() => {
-    setIsSidebarOpen(!isSidebarOpen);
-  }}
-  className={`lg:hidden fixed top-3 transition-all ease-in-out duration-300 z-[500] p-2 rounded-md text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-[#1F1F23] border ${
-    isSidebarOpen ? "left-[230px]" : "left-4"
-  }`}
->
-  {isSidebarOpen ? (
-    <X className="h-6 w-6" />
-  ) : (
-    <PanelLeftOpen className="h-6 w-6" />
-  )}
-</button>
+        id="sidebar-toggle"
+        onClick={() => {
+          setIsSidebarOpen(!isSidebarOpen);
+        }}
+        className={`lg:hidden fixed top-3 transition-all ease-in-out duration-300 z-[500] p-2 rounded-md text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-[#1F1F23] border ${
+          isSidebarOpen ? "left-[230px]" : "left-4"
+        }`}
+      >
+        {isSidebarOpen ? (
+          <X className="h-6 w-6" />
+        ) : (
+          <PanelLeftOpen className="h-6 w-6" />
+        )}
+      </button>
 
       {/* Right-side Icons */}
       <div className="flex gap-4 items-center absolute z-[450] right-5">
@@ -179,6 +178,20 @@ export default function Header({
               src="https://i.pravatar.cc/300"
               className="rounded-full border"
             />
+            {/*
+ <img
+              src=`https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/512/${random(0,99)}.jpg`
+              className="rounded-full border"
+            />
+  */}
+
+            {/*
+ https://www.dicebear.com/styles/notionists-neutral/
+ <img
+              src=`https://api.dicebear.com/9.x/notionists-neutral/svg?seed=Felix`
+              className="rounded-full border"
+            />
+  */}
           </button>
           {isProfileOpen && (
             <motion.div

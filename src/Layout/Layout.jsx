@@ -5,6 +5,7 @@ import {
 import {
   X, Moon, Bell, LogOut, Search, ShoppingBag, PanelLeftOpen,
   ChevronDown, ChevronLeft, ChevronFirst, ChevronRight,Sun,
+  Plus,
 } from "lucide-react";
 
 import { 
@@ -37,6 +38,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet";
 import { twMerge } from "tailwind-merge";
+import { initFlowbite } from 'flowbite';
 
 const useRouteAndPageName = () => {
   const location = useLocation();
@@ -62,16 +64,9 @@ export default function Layout() {
   const [isSearchModalOpen, setIsSearchModalOpen] = useState(false);
   const [currentTime, setCurrentTime] = useState(new Date());
   const formattedTime = currentTime.toLocaleTimeString();
-  const [isHovering, setIsHovering] = useState(null);
   const { user }= useUser();
 
-  const handleMouseEnter = (id) => {
-    setIsHovering(id);
-  };
 
-  const handleMouseLeave = () => {
-    setIsHovering(null);
-  };
   const toggleTheme = () => {
     const newTheme = !isDarkMode ? "dark" : "light";
     setIsDarkMode(!isDarkMode);
@@ -87,6 +82,7 @@ export default function Layout() {
   };
 
   useEffect(() => {
+    initFlowbite(); 
     setTimeout(() => setIsLoading(false), 3500);
     const storedTheme = localStorage.getItem("theme");
     if (storedTheme) {
@@ -160,6 +156,8 @@ export default function Layout() {
             ChevronFirst={ChevronFirst}
             twMerge={twMerge}
             ChevronRight={ChevronRight}
+            activePath={pageName}
+            
           />
 
           <div className="flex-1 flex flex-col overflow-hidden  dark:bg-gray-900 ">
@@ -233,24 +231,21 @@ export default function Layout() {
             supportUrl={seoData.supportUrl}
             supportMessage="Buy me a coffee"
             coffeeLogo={coffeeLogo}
-            position="bottom-right" // Example position
             showSupport={true}
             showWhatsApp={true}
             showPhone={true}
             showLinkedIn={true}
             showGitHub={true}
             showDiscord={true}
-            className=""
             MessageCircle={FaWhatsapp}
             PhoneCall={FaPhoneAlt}
             Linkedin={FaLinkedinIn}
             Github={FaGithub }
             Discord={FaDiscord}
-            twMerge={twMerge}
-            handleMouseEnter={handleMouseEnter}
-            handleMouseLeave={handleMouseLeave}
-            isHovering={isHovering}
+            Plus={Plus}
             socialLinks={seoData.socialLinks}
+            isDarkMode={isDarkMode}
+            
           />
         </div>
       </div>

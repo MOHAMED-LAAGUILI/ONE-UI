@@ -14,7 +14,6 @@ export default function Sidebar({
   twMerge,
   ChevronDown,
    ChevronRight,
-  
 }) {
   
 
@@ -94,7 +93,7 @@ export default function Sidebar({
                       )}
                     >
                       {section.items.map((item, idx) => {
-                        const isActive = activePath === item.path;
+                        const isActive = `/${activePath}` === item.path;
                         return (
                           <Link
                             key={idx}
@@ -103,13 +102,14 @@ export default function Sidebar({
                               "relative flex items-center px-3 py-2 text-sm rounded-md my-1",
                               "transition-colors duration-200 group",
                           
-                              isActive
-                                ? "bg-gray-600 text-white font-medium shadow-sm"
+                              isActive 
+                                ? "bg-gray-100 border  font-medium shadow-sm"
                                 : "text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"
                             )}
                             aria-current={isActive ? "page" : undefined}
                           >
-                            {!isActive && (
+                            
+                            { isActive && (
                               <>
                               {item.icon}
                               </>
@@ -127,9 +127,9 @@ export default function Sidebar({
                     className={twMerge(
                       "flex items-center px-3 py-2 text-sm rounded-md",
                       "transition-colors duration-200 w-full",
-                      "focus:outline-none focus:ring-2 focus:ring-gray-500 ",
+                      "focus:outline-none  ",
                       activePath === section.path
-                        ? "bg-blue-600 text-white font-medium shadow-sm"
+                        ? "bg-gray-100  font-medium shadow-sm border"
                         : "text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"
                     )}
                     aria-current={activePath === section.path ? "page" : undefined}
